@@ -1,0 +1,193 @@
+<?php
+
+include_once "mysql_connect.php";
+mysql_query("UPDATE view_counter SET `views` = `views` + 1 WHERE id = '1' ");
+
+$sql = mysql_query("SELECT * FROM view_counter WHERE id = '1' ");
+
+while ($row =mysql_fetch_array($sql)) {
+$id = $row["id"]; 
+$pagename = $row["pagename"]; 
+$views = $row["views"]; 
+
+};
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	<meta charset="UTF-8">
+	<title>Joshua Chou's Career</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="travel.css">
+	<link rel="stylesheet" href="travelprint.css" media = "print">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/slides.min.jquery.js"></script>
+<script>
+$(document).ready(function(){
+$("#rightShift").click(function(){
+    $("#image_list img:last").detach().insertBefore("#image_list img:first");
+});
+
+$("#leftShift").click(function(){
+    $("#image_list img:first").detach().insertAfter("#image_list img:last");
+});
+});
+</script>
+
+<script>
+$(function(){
+		$('.fadein img:gt(0)').hide();
+		setInterval(function(){
+		$('.fadein :first-child').fadeOut(1000)
+		   .next('img').fadeIn(1000)
+		   .end().appendTo('.fadein');}, 5000);
+	});
+    </script>
+</head>
+<body>
+<header>
+	<img src="images/Biopic2.png" alt="My Picture" width="83" height="63" />
+		<hgroup>
+			<h1>Joshua Chou's Life </h1>
+		</hgroup>
+</header>
+	<nav>
+		<ul>
+    		<li><a class="About" href="index.html">About Me</a></li>
+    		<li><a href="career.html">Career</a></li>
+    		<li><a href="travel.html">Travel</a></li>
+    		<li><a href="hobbies.html">Hobbies</a></li>
+    		<li><a href="contact.html">Contact Me</a></li>
+    	</ul>
+    </nav>
+	
+	<section>
+	<hgroup>
+			<h1>These are my pictures from around the world</h1>
+	</hgroup>
+	<div class="fadein">
+    <img src="images/SanFran.png" alt="My Picture"  width="190" height="190" /> 
+    <img src="images/travel/China1.png" alt="My Picture"  width="290" height="190" />
+    <img src="images/travel/China2.png" alt="My Picture"  width="290" height="190" />  
+    <img src="images/travel/AtSea1.png"  alt="My Picture" width="290" height="190" />
+     <img src="images/travel/AtSea2.png"  alt="My Picture" width="290" height="190" />
+    <img src="images/travel/Seattle1.png" alt="My Picture"  width="290" height="190" />
+    <img src="images/travel/Seattle2.png" alt="My Picture"  width="290" height="190" />  
+    <img src="images/travel/Seattle3.png" alt="My Picture"  width="290" height="190"/> 
+    <img src="images/travel/SouthAfrica1.png"  alt="My Picture" width="290" height="190" /> 
+    <img src="images/travel/SouthAfrica2.png" alt="My Picture"  width="290" height="190" /> 
+    <img src="images/travel/SouthAfrica3.png" alt="My Picture"  width="290" height="190" /> 
+    <img src="images/travel/SouthAfrica4.png" alt="My Picture"  width="290" height="190" />
+    <img src="images/travel/Vietnam1.png" alt="My Picture"  width="290" height="190" /> 
+    <img src="images/travel/Vietnam2.png" alt="My Picture"   width="290" height="190" />
+    <img src="images/travel/Vietnam3.png" alt="My Picture"  width="290" height="190" />  
+    <img src="images/travel/Brazil1.png" alt="My Picture"  width="290" height="190"/>  
+    <img src="images/travel/Brazil2.png" alt="My Picture"  width="290" height="190"/>  
+    <img src="images/travel/Brazil3.png" alt="My Picture"  width="290" height="190" />
+    <img src="images/travel/Brazil4.png" alt="My Picture"  width="290" height="190"/>
+    <img src="images/travel/Burma1.png" alt="My Picture"   width="290" height="190" />
+    <img src="images/travel/Burma2.png" alt="My Picture"  width="290" height="190" />
+    <img src="images/travel/Burma3.png" alt="My Picture"  width="290" height="190"/>
+    <img src="images/travel/Colorado1.png" alt="My Picture"  width="290" height="190" />
+    <img src="images/travel/Colorado2.png" alt="My Picture"  width="290" height="190"/>
+    <img src="images/travel/Japan1.png" alt="My Picture"  width="290" height="190"/>
+     <img src="images/travel/Japan2.png" alt="My Picture"  width="290" height="190" />
+      <img src="images/travel/Mauritius1.png" alt="My Picture"  width="290" height="190" />
+      <img src="images/travel/Mauritius2.png" alt="My Picture"  width="290" height="190" />
+      <img src="images/travel/SanFran1.png" alt="My Picture"  width="290" height="190"/>                       
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br> 
+	<br>
+	<br>
+	<br>
+	<br> 
+	<br>
+	<br> 
+	<br>
+	<div id="image_list">
+	<img src="images/SanFran.png" id="SanFran" alt="My Picture" style = "display none" width="100" height="100" usemap="#SFmap"/>
+	<map name="SFmap">
+  		<area shape="circle" coords="60,150,150" alt="Sun" href="images/travel/SanFran1.png">
+		</map>
+	<img src="images/travel/China1.png" id="China" alt="My Picture" width="100" height="100"  usemap="#Chinamap"/>
+		<map name="Chinamap">
+  		<area shape="circle" coords="60,150,150" alt="Sun" href="images/travel/China2.png">
+		</map>
+	<img src="images/travel/AtSea1.png" id="Sea" alt="My Picture" width="100" height="100"  usemap="#AtSeamap"/>
+		<map name="AtSeamap">
+  		<area shape="circle" coords="60,150,150" alt="Sun" href="images/travel/AtSea2.png">
+		</map>
+	<img src="images/travel/Colorado1.png" id="Colorado" alt="My Picture" width="100" height="100"  usemap="#Coloradomap"/>
+		<map name="Coloradomap">
+  		<area shape="circle" coords="60,150,150" alt="Sun" href="images/travel/Colorado2.png">
+		</map>
+	<img src="images/travel/Brazil1.png" id="Brazil" alt="My Picture" width="100" height="100"  usemap="#Brazilmap"/>
+		<map name="Brazilmap">
+  		<area shape="circle" coords="60,150,150" alt="Sun" href="images/travel/Brazil2.png">
+		</map>
+		<img src="images/travel/Brazil3.png" id="Brazil2" alt="My Picture" width="100" height="100"  usemap="#Brazil2map"/>
+		<map name="Brazil2map">
+  		<area shape="circle" coords="60,150,150" alt="Sun" href="images/travel/Brazil4.png">
+		</map>
+		<img src="images/travel/India1.png" id="India" alt="My Picture" width="100" height="100"  usemap="#Indiamap"/>
+		<map name="Indiamap">
+  		<area shape="circle" coords="60,150,150" alt="Sun" href="images/travel/India2.png">
+		</map>
+		<img src="images/travel/Japan2.png" id="Japan" alt="My Picture" width="100" height="100"  usemap="#Japanmap"/>
+		<map name="Japanmap">
+  		<area shape="circle" coords="60,150,150" alt="Sun" href="images/travel/Japan1.png">
+		</map>
+		<img src="images/travel/Seattle1.png" id="Seattle" alt="My Picture" width="100" height="100"  usemap="#Seattlemap"/>
+		<map name="Seattlemap">
+  		<area shape="circle" coords="60,150,150" alt="Sun" href="images/travel/Seattle2.png">
+		</map>
+		<img src="images/travel/SouthAfrica4.png" id="SouthAfrica" alt="My Picture" width="100" height="100"  usemap="#SouthAfricamap"/>
+		<map name="SouthAfricamap">
+  		<area shape="circle" coords="60,150,150" alt="Sun" href="images/travel/SouthAfrica3.png">
+		</map>
+		<img src="images/travel/Mauritius1.png" id="Mauritius" alt="My Picture" width="100" height="100"  usemap="#Mauritiusmap"/>
+		<map name="Mauritiusmap">
+  		<area shape="circle" coords="60,150,150" alt="Sun" href="images/travel/Mauritius2.png">
+		</map>
+		<img src="images/travel/Vietnam1.png" id="Vietnam" alt="My Picture" width="100" height="100"  usemap="#Vietnammap"/>
+		<map name="Vietnammap">
+  		<area shape="circle" coords="60,150,150" alt="Sun" href="images/travel/Vietnam2.png">
+		</map>
+		<img src="images/travel/Burma1.png" id="Burma" alt="My Picture" width="100" height="100"  usemap="#Burmamap"/>
+		<map name="Burmamap">
+  		<area shape="circle" coords="60,150,150" alt="Sun" href="images/travel/Burma2.png">
+		</map>
+		<img src="images/travel/Seattle3.png" id="Mix" alt="My Picture" width="100" height="100"  usemap="#Mixmap"/>
+		<map name="Mixmap">
+  		<area shape="circle" coords="60,150,150" alt="Sun" href="images/travel/Vietnam3.png">
+		</map>
+		</div>
+		<button id="leftShift">Rotate Images Left</button>
+	<button id="rightShift">Rotate Images Right</button>
+	<br>
+	<br>
+	<p>Number of images:
+	<script>
+	document.write(document.images.length);
+	</script></p>
+    </section>
+	<br>
+	<br>
+	<br>
+	<footer>
+		<p>&copy; 2013, Joshua Chou Production, Louisville, KY 40245</p>
+		<h1><a href=https://www.facebook.com/Joshthedudeoflife> <img src="images/facebooklogo.png" alt="Facebook" width="30" height="30" style="float: right" /></a></h1>
+		<h2><a href=https://twitter.com/JoshuaChou1><img src="images/twitter-bird-white-on-blue.png" alt="Twitter" width="30" height="30" style="float: right" /></a></h2>
+		<h3><a href= http://goo.gl/UEzo7><img src="images/GooglePlus-Logo-02.png" alt="Google+" width="30" height="30" style="float: right" /></a></h3>
+		<h4><a href= http://www.linkedin.com/pub/joshua-chou/10/552/200><img src="images/linkedin.png" alt="linkedIn" width="30" height="30" style="float: right" /></a></h4>
+	</footer>
+	</body>
+	</html>

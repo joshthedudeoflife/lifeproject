@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Joshua Chou's Bio</title>
+	<script type="text/javascript" src="contact.js"></script>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="contact.css">
+	<link rel="stylesheet" href="contactprint.css" media = "print">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+</head>
+<body>
+<header>
+	<img src="images/Biopic2.png" alt="My Picture" width="83" height="63" />
+		<hgroup>
+			<h1>Joshua Chou's Life </h1>
+		</hgroup>
+</header>
+	<nav>
+		<ul>
+    		<li><a class="About" href="index.html">About Me</a></li>
+    		<li><a href="career.html">Career</a></li>
+    		<li><a href="travel.html">Travel</a></li>
+    		<li><a href="hobbies.html">Hobbies</a></li>
+    		<li><a href="contact.html">Contact Me</a></li>
+    	</ul>
+    </nav>
+    
+<section>
+	<h1>Contact Joshua Chou</h1>
+	<br> 
+<form name="demo" onsubmit="return validateContact(this)" action="projectMySql.php" method="post">
+	<fieldset>
+    <label for="firstname">Your First name:</label>
+    <input name="firstname" id = "firstname" size="35" maxlength="50" type="text"><br>
+    <label for="lastname">Your Last name:</label>
+    <input name="lastname" id = "lastname" size="35" maxlength="25" type="text"><br>
+    <label for="email">Your email:</label>
+    <input name="email" id = "email" size="35" maxlength="30" type="text" placeholder="IE mrt@hotmail.com"><br>
+    <label for="phone">Your telephone number:</label>
+    <input name="phone" id = "phone" size="35" maxlength="25" type="text" placeholder="(XXX)-XXX-XXXX"><br>
+   </fieldset>
+   				<fieldset id="buttons">
+				<legend>Reason for Contact</legend>
+				<label>Investment</label><br>
+				<input type="radio" name="Investment" value="VC">Venture Capital<br>
+				<input type="radio" name="Investment" value="Angel">Angel Investment<br>
+				<input type="radio" name="Investment" value="Other">Other<br><br>
+				</fieldset>
+				
+				<fieldset id="check">
+				<legend>How did you hear about me?</legend>
+				<input type="checkbox" name="network1" value="pepperoni">Facebook<br>
+				<input type="checkbox" name="network2" value="mushrooms">Twitter<br>
+				<input type="checkbox" name="network3" value="olives">Google+<br>
+				<input type="checkbox" name="network4" value="olives">LinkedIn<br>
+				</fieldset>
+	
+				<fieldset id="sub">
+				<legend>Submit</legend>
+				<label>&nbsp;</label>
+				<input type="submit" id="submit" value="Submit">
+				<input type="reset" id="reset" value="Reset Fields"><br>
+				</fieldset>
+</form>
+<br>
+		<br>
+	</section>
+	<aside>
+		<img src="images/travel/India2.png" alt="India pic" width="205" height="163"/>
+		<br>
+		<br>
+		<br>
+		<img src="images/travel/Burma3.png" alt="Burma pic" width="205" height="163" />
+		<br>
+	
+	</aside>
+	<footer>
+		<p>&copy; 2013, Joshua Chou Production, Louisville, KY 40245</p>
+		<h1><a href=https://www.facebook.com/Joshthedudeoflife> <img src="images/facebooklogo.png" alt="Facebook" width="30" height="30" style="float: right" /></a></h1>
+		<h2><a href=https://twitter.com/JoshuaChou1><img src="images/twitter-bird-white-on-blue.png" alt="Twitter" width="30" height="30" style="float: right" /></a></h2>
+		<h3><a href= http://goo.gl/UEzo7><img src="images/GooglePlus-Logo-02.png" alt="Google+" width="30" height="30" style="float: right" /></a></h3>
+		<h4><a href= http://www.linkedin.com/pub/joshua-chou/10/552/200><img src="images/linkedin.png" alt="linkedIn" width="30" height="30" style="float: right" /></a></h4>
+	</footer> 
+</body>
+</html>
